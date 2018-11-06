@@ -1,0 +1,11 @@
+<h1><%= @task.title %></h1>
+<div class="inset">
+  <%= @task.details %>
+</div>
+<p>
+  <input type="checkbox" disabled<%= @task.completed ? " checked" : "" %>>
+  <span>Completed</span>
+</p>
+<%= link_to '<i class="fas fa-edit"></i>Edit task'.html_safe, edit_task_path %>
+<br><br>
+<%= render 'return' %>
